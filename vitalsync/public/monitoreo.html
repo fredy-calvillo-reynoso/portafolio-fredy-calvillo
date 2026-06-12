@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoreo Médico - VitalSync</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/monitoreo.css" />
+</head>
+<body>
+  <div class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <div class="banner-icon"><i class="fas fa-heart-pulse"></i></div>
+        <h2><i class="fas fa-file-medical"></i> Registro Médico <span class="highlight">VitalSync</span></h2>
+        <p class="banner-subtitle text-white">Monitoreo y ubicación del paciente</p>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+      <h1 class="mb-0">Monitoreo Médico</h1>
+      <div class="d-flex gap-2">
+        <a href="registro-paciente.html" class="btn btn-primary"><i class="fas fa-user-plus me-1"></i> Registrar</a>
+        <a href="index.html" class="btn btn-secondary"><i class="fas fa-arrow-left me-1"></i> Inicio</a>
+      </div>
+    </div>
+
+    <div id="alertaMonitoreo" class="alert alert-info">Cargando último paciente registrado...</div>
+
+    <section class="form-container readonly-form">
+      <h4 class="mb-3"><i class="fas fa-user"></i> Datos del Paciente</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Nombre</label>
+          <div class="form-control-static" id="datoNombre">—</div>
+        </div>
+        <div class="col-md-6">
+          <label>Apellidos</label>
+          <div class="form-control-static" id="datoApellidos">—</div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label>Edad</label>
+          <div class="form-control-static" id="datoEdad">—</div>
+        </div>
+        <div class="col-md-4">
+          <label>Fecha de Nacimiento</label>
+          <div class="form-control-static" id="datoFechaNacimiento">—</div>
+        </div>
+        <div class="col-md-4">
+          <label>Género</label>
+          <div class="form-control-static" id="datoGenero">—</div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <label>Dirección</label>
+        <div class="form-control-static multiline" id="datoDireccion">—</div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <label>Teléfono de Emergencias</label>
+          <div class="form-control-static" id="datoTelefonoEmergencias">—</div>
+        </div>
+        <div class="col-md-6">
+          <label>Teléfono del Familiar</label>
+          <div class="form-control-static" id="datoTelefonoFamiliar">—</div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label>Tipo de Sangre</label>
+          <div class="form-control-static" id="datoTipoSangre">—</div>
+        </div>
+        <div class="col-md-4">
+          <label>Alergia General</label>
+          <div class="form-control-static" id="datoAlergiaGeneral">—</div>
+        </div>
+        <div class="col-md-4">
+          <label>Alergia a Medicamentos</label>
+          <div class="form-control-static" id="datoAlergiaMedicamento">—</div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <label>Enfermedades Preexistentes</label>
+        <div class="form-control-static multiline" id="datoEnfermedades">—</div>
+      </div>
+      <div class="mt-2">
+        <label>Alergias</label>
+        <div class="form-control-static multiline" id="datoAlergias">—</div>
+      </div>
+      <div class="mt-2">
+        <label>Detalle de Alergia a Medicamentos</label>
+        <div class="form-control-static multiline" id="datoMedicamentos">—</div>
+      </div>
+    </section>
+
+    <section class="monitor-container">
+      <h3 class="text-center mb-4"><i class="fas fa-heartbeat"></i> Monitoreo en Tiempo Real</h3>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="vital-card pulse">
+            <div class="vital-header"><i class="fas fa-heartbeat pulse-icon"></i><h4>Ritmo Cardíaco</h4></div>
+            <div class="vital-value" id="ritmo">-- <span>lpm</span></div>
+            <div class="ecg-container"><canvas id="ecgChart"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vital-card temp">
+            <div class="vital-header"><i class="fas fa-thermometer-half temp-icon"></i><h4>Temperatura</h4></div>
+            <div class="vital-value" id="temp">-- <span>°C</span></div>
+            <div class="thermometer-container">
+              <div class="thermometer">
+                <div class="bulb"></div>
+                <div class="stem"><div class="fluid"></div></div>
+                <div class="scale"><span class="min">35</span><span class="max">42</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vital-card oxygen">
+            <div class="vital-header"><i class="fas fa-lungs oxygen-icon"></i><h4>Oxigenación</h4></div>
+            <div class="vital-value" id="oxigeno">-- <span>%</span></div>
+            <div class="pleth-container"><canvas id="plethChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="monitor-container mt-4">
+      <h3 class="text-center mb-4"><i class="fas fa-location-dot"></i> Ubicación del Paciente</h3>
+      <div id="map" style="height: 350px; border-radius: 10px;"></div>
+    </section>
+  </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script type="module" src="assets/js/route-guard.js"></script>
+<script type="module" src="assets/js/monitoreo.js"></script>
+</body>
+</html>

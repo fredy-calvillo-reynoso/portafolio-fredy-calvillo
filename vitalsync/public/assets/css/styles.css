@@ -1,0 +1,83 @@
+body {
+  background: #f4f6f9;
+  color: #1f2933;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+  background: linear-gradient(135deg, #1B3A6B, #1A56C4);
+  padding: 28px 0;
+  margin-bottom: 28px;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-icon,
+.banner-icon i,
+.banner h2,
+.banner h2 i,
+.banner .highlight,
+.banner .banner-subtitle {
+  color: #ffffff !important;
+}
+
+.banner-icon {
+  font-size: 46px;
+  margin-bottom: 8px;
+}
+
+.banner h2 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.banner-subtitle {
+  margin-top: 8px;
+}
+
+.home-card,
+.form-container,
+.monitor-container {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.medical-btn,
+.btn-primary {
+  background: #1A56C4;
+  border-color: #1A56C4;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  display: inline-block;
+}
+
+.medical-btn.secondary,
+.btn-secondary {
+  background: #1B3A6B;
+  border-color: #1B3A6B;
+  color: #ffffff !important;
+}
+
+.required {
+  color: #dc3545;
+}
+
+.form-control-static {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 42px;
+}
+
+.form-control-static.multiline {
+  min-height: 68px;
+  white-space: pre-wrap;
+}

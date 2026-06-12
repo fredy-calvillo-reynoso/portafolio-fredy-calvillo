@@ -1,0 +1,66 @@
+.vital-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  height: 100%;
+}
+
+.vital-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.vital-value {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.ecg-container,
+.pleth-container {
+  height: 120px;
+}
+
+.thermometer-container {
+  display: flex;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.thermometer {
+  position: relative;
+  height: 110px;
+  width: 40px;
+}
+
+.stem {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  width: 8px;
+  height: 75px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fluid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #dc3545;
+}
+
+.bulb {
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: #dc3545;
+  border-radius: 50%;
+}
