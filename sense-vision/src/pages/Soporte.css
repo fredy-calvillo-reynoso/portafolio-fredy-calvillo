@@ -1,0 +1,836 @@
+/* ================================================
+   SENSE VISION — Soporte.css
+   Responsive: desktop / tablet / mobile
+   ================================================ */
+
+.sv-soporte {
+  padding-bottom: 4rem;
+}
+
+/* ================================================
+   HERO
+   ================================================ */
+.sv-soporte-hero {
+  background: linear-gradient(140deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  padding: 3.75rem 0 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.sv-hero-inner {
+  text-align: center;
+}
+
+.sv-hero-titulo {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.sv-hero-subtitulo {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.sv-busqueda {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.sv-busqueda input {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 0.97rem;
+  font-family: var(--font-main);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 20px rgba(2, 43, 58, 0.25);
+  transition: var(--transition);
+  color: var(--color-text);
+}
+
+.sv-busqueda input:focus {
+  outline: none;
+  box-shadow: 0 4px 24px rgba(2, 43, 58, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+/* ================================================
+   ACCESO RÁPIDO
+   ================================================ */
+.sv-acceso-rapido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.sv-acceso-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-main);
+}
+
+.sv-acceso-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.sv-acceso-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.sv-acceso-icono {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.sv-acceso-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ================================================
+   ENCABEZADOS DE SECCIÓN
+   ================================================ */
+.sv-seccion-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.sv-seccion-titulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.45rem;
+}
+
+.sv-seccion-desc {
+  color: var(--color-text-muted);
+  font-size: 0.93rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ================================================
+   PREGUNTAS FRECUENTES
+   ================================================ */
+.sv-faq {
+  margin-bottom: 3rem;
+}
+
+.sv-faq-filtros {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.sv-filtro-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-alt);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.sv-filtro-btn:hover {
+  background: rgba(31, 122, 140, 0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.sv-filtro-btn--activo {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.sv-filtro-btn--activo:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.sv-faq-lista {
+  overflow: hidden;
+}
+
+.sv-faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-faq-item:last-child {
+  border-bottom: none;
+}
+
+.sv-faq-pregunta {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-main);
+  transition: background 0.18s ease;
+}
+
+.sv-faq-pregunta:hover {
+  background: rgba(31, 122, 140, 0.04);
+}
+
+.sv-faq-pregunta:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.sv-faq-cat {
+  font-size: 0.71rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  background: rgba(31, 122, 140, 0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sv-faq-texto {
+  flex: 1;
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.sv-faq-chevron {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.sv-faq-item--abierto .sv-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.sv-faq-respuesta {
+  padding: 0 1.5rem 1.1rem;
+  background: rgba(191, 219, 247, 0.08);
+  border-top: 1px solid var(--color-border);
+}
+
+.sv-faq-respuesta p {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.68;
+}
+
+.sv-faq-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1.5rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.sv-faq-vacio svg {
+  color: var(--color-primary);
+  opacity: 0.45;
+}
+
+.sv-faq-vacio p {
+  margin: 0;
+  font-size: 0.93rem;
+}
+
+/* ================================================
+   CANALES DE CONTACTO
+   ================================================ */
+.sv-canales {
+  margin-bottom: 3rem;
+}
+
+.sv-canales-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.sv-canal-card {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.sv-canal-icono {
+  color: var(--color-primary);
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.sv-canal-contenido h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.4rem;
+}
+
+.sv-canal-contenido p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.sv-canal-btn {
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  word-break: break-word;
+}
+
+/* ================================================
+   SOPORTE PARA PAGOS
+   ================================================ */
+.sv-pagos-soporte {
+  margin-bottom: 3rem;
+}
+
+.sv-pagos-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Tarjeta bancaria */
+.sv-banco-card {
+  padding: 1.75rem;
+}
+
+.sv-banco-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.sv-banco-icono-wrap {
+  color: var(--color-primary);
+  background: rgba(31, 122, 140, 0.1);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sv-banco-encabezado h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.sv-banco-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+}
+
+.sv-banco-tabla {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.sv-banco-tabla li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  font-size: 0.87rem;
+  gap: 1rem;
+}
+
+.sv-banco-tabla li:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-banco-tabla li span {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.sv-banco-tabla li strong {
+  color: var(--color-text);
+  text-align: right;
+}
+
+.sv-banco-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  background: rgba(31, 122, 140, 0.07);
+  border: 1px solid rgba(31, 122, 140, 0.18);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.sv-banco-aviso svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.sv-banco-aviso p {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Tarjeta ayuda de pagos */
+.sv-pagos-ayuda-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sv-pagos-ayuda-icono {
+  color: var(--color-primary);
+  display: flex;
+}
+
+.sv-pagos-ayuda-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.sv-pagos-ayuda-card > p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.sv-mini-contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sv-mini-contacto li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.sv-mini-icono {
+  color: var(--color-primary);
+  display: flex;
+  flex-shrink: 0;
+}
+
+.sv-mini-contacto a {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.sv-mini-contacto a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sv-tiempo-resp {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.85rem;
+  margin-top: auto;
+}
+
+.sv-tiempo-resp svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+/* ================================================
+   CONTACTO
+   ================================================ */
+.sv-contacto {
+  margin-bottom: 1rem;
+}
+
+.sv-contacto-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Formulario */
+.sv-contacto-form-card {
+  padding: 1.75rem;
+}
+
+.sv-contacto-form-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 1.25rem;
+}
+
+.sv-contacto-exito {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: #e6f8f6;
+  color: var(--color-secondary);
+  border: 1px solid #b8ece8;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.sv-contacto-exito svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.sv-submit-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.sv-campo-req-nota {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.sv-contador {
+  float: right;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+/* Lateral */
+.sv-contacto-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sv-contacto-directo {
+  padding: 1.75rem;
+}
+
+.sv-contacto-directo h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.6rem;
+}
+
+.sv-contacto-intro {
+  font-size: 0.87rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.sv-contacto-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sv-contacto-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.sv-contacto-icono-wrap {
+  color: var(--color-primary);
+  background: rgba(31, 122, 140, 0.1);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sv-contacto-dato {
+  display: flex;
+  flex-direction: column;
+}
+
+.sv-contacto-etiqueta {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.1rem;
+}
+
+.sv-contacto-valor {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.sv-contacto-valor:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sv-horario {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.sv-horario h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.45rem;
+}
+
+.sv-horario p {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  margin: 0.2rem 0;
+}
+
+/* Estado del servicio */
+.sv-estado-card {
+  padding: 1.25rem 1.75rem;
+}
+
+.sv-estado-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 1rem;
+}
+
+.sv-estado-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sv-estado-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.87rem;
+  color: var(--color-text-muted);
+}
+
+.sv-estado-ok {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+/* ================================================
+   RESPONSIVE — Tablet (≤1024px)
+   ================================================ */
+@media (max-width: 1024px) {
+  .sv-acceso-rapido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sv-canales-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sv-pagos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-contacto-lateral {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* ================================================
+   RESPONSIVE — Mobile (≤768px)
+   ================================================ */
+@media (max-width: 768px) {
+  .sv-soporte-hero {
+    padding: 2.75rem 0 2.25rem;
+  }
+
+  .sv-hero-titulo {
+    font-size: 1.75rem;
+  }
+
+  .sv-hero-subtitulo {
+    font-size: 0.93rem;
+  }
+
+  .sv-acceso-rapido {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .sv-acceso-card {
+    padding: 1.1rem 0.75rem;
+  }
+
+  .sv-seccion-titulo {
+    font-size: 1.4rem;
+  }
+
+  .sv-faq-pregunta {
+    padding: 0.9rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .sv-faq-cat {
+    display: none;
+  }
+
+  .sv-faq-respuesta {
+    padding: 0 1rem 1rem;
+  }
+
+  .sv-canales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-canal-card {
+    flex-direction: row;
+  }
+
+  .sv-banco-tabla li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .sv-banco-tabla li strong {
+    text-align: left;
+  }
+
+  .sv-banco-card,
+  .sv-pagos-ayuda-card {
+    padding: 1.25rem;
+  }
+
+  .sv-contacto-form-card {
+    padding: 1.25rem;
+  }
+
+  .sv-contacto-directo {
+    padding: 1.25rem;
+  }
+
+  .sv-estado-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .sv-contacto-lateral {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================
+   RESPONSIVE — Móvil pequeño (≤480px)
+   ================================================ */
+@media (max-width: 480px) {
+  .sv-hero-titulo {
+    font-size: 1.5rem;
+  }
+
+  .sv-hero-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .sv-acceso-label {
+    font-size: 0.78rem;
+  }
+
+  .sv-faq-texto {
+    font-size: 0.875rem;
+  }
+
+  .sv-canal-card {
+    padding: 1rem;
+  }
+}

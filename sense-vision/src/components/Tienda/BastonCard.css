@@ -1,0 +1,161 @@
+/* src/components/Tienda/BastonCard.css */
+
+.sv-baston-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.sv-baston-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.sv-baston-card--activo {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(31, 122, 140, 0.18), var(--shadow-sm);
+}
+
+/* Badge */
+.sv-baston-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+}
+
+/* Imagen */
+.sv-baston-img-wrap {
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-baston-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+/* Cuerpo */
+.sv-baston-body {
+  padding: 1.25rem 1.5rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sv-baston-nombre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.sv-baston-desc-corta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.sv-baston-precio-row {
+  margin-top: 0.25rem;
+}
+
+.sv-baston-precio {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.sv-baston-moneda {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* Botón agregar */
+.sv-agregar-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-md);
+  border: none;
+  font-family: var(--font-main);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  transition: var(--transition);
+}
+
+.sv-agregar-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.sv-agregar-btn--activo {
+  background-color: var(--color-secondary);
+}
+
+.sv-agregar-btn--activo:hover {
+  background-color: #25a99d;
+}
+
+/* Detalles desplegables */
+.sv-baston-detalles {
+  border-top: 1px solid var(--color-border);
+  padding: 0.85rem 1.5rem;
+}
+
+.sv-baston-detalles summary {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sv-baston-detalles summary::-webkit-details-marker { display: none; }
+
+.sv-baston-detalles summary::after {
+  content: "›";
+  margin-left: auto;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.sv-baston-detalles[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.sv-baston-detalles p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0.65rem 0 0;
+}

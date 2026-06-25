@@ -1,0 +1,257 @@
+/* ============================================
+   SENSE VISION - Sistema de Diseño
+   Paleta basada en psicología del color:
+   - Azul petróleo (#1f7a8c): confianza, profesionalismo, tecnología
+   - Azul profundo (#022b3a): seguridad, solidez
+   - Celeste (#bfdbf7): calma, accesibilidad, claridad
+   - Naranja/coral (#ff7e5f): acción, calidez, llamadas a la acción
+   - Verde menta (#2ec4b6): éxito, confirmación, salud
+   ============================================ */
+
+:root {
+  /* Colores principales */
+  --color-primary: #1f7a8c;
+  --color-primary-dark: #022b3a;
+  --color-primary-light: #bfdbf7;
+  --color-secondary: #2ec4b6;
+  --color-accent: #ff7e5f;
+
+  /* Estados */
+  --color-success: #2ec4b6;
+  --color-warning: #ffb703;
+  --color-danger: #e63946;
+  --color-info: #4895ef;
+
+  /* Neutros */
+  --color-bg: #f4f9fb;
+  --color-bg-alt: #ffffff;
+  --color-text: #1b262c;
+  --color-text-muted: #5c6b73;
+  --color-border: #e1e8ed;
+
+  /* Tipografía */
+  --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Espaciados */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(2, 43, 58, 0.08);
+  --shadow-md: 0 6px 20px rgba(2, 43, 58, 0.12);
+  --shadow-lg: 0 12px 32px rgba(2, 43, 58, 0.18);
+
+  /* Transiciones */
+  --transition: all 0.25s ease;
+
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-main);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.btn-accent:hover {
+  background-color: #e8674a;
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c5283d;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--color-primary-dark);
+  font-size: 0.92rem;
+}
+
+.form-group small {
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+  transition: var(--transition);
+  background-color: #fbfdfe;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(31, 122, 140, 0.15);
+}
+
+/* Utility */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+@media (max-width: 768px) {
+  .section-title { font-size: 1.6rem; }
+}
+
+/* ============================================
+   ESTILOS GLOBALES DE VALIDACIÓN DE FORMULARIOS
+   ============================================ */
+
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+  border-color: var(--color-danger) !important;
+  background-color: #fff8f8;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.form-group input.input-ok,
+.form-group select.input-ok,
+.form-group textarea.input-ok {
+  border-color: var(--color-success);
+  background-color: #f6fffe;
+}
+
+.form-error-msg {
+  color: var(--color-danger);
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.form-success-msg {
+  color: var(--color-success);
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+}

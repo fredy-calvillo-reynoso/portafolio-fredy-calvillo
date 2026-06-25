@@ -1,0 +1,179 @@
+/* src/components/Layout/Navbar.css */
+
+.sv-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.sv-nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.sv-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.sv-nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sv-nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 0.4rem 0;
+  position: relative;
+}
+
+.sv-nav-links a:hover,
+.sv-nav-links a.active {
+  color: var(--color-primary);
+}
+
+.sv-nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.sv-login-link {
+  background-color: var(--color-primary);
+  color: #fff !important;
+  padding: 0.55rem 1.4rem !important;
+  border-radius: var(--radius-md);
+}
+
+.sv-login-link:hover {
+  background-color: var(--color-primary-dark) !important;
+}
+
+.sv-login-link.active::after {
+  display: none;
+}
+
+.sv-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sv-nav-username {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sv-logout-btn {
+  background-color: transparent;
+  border: 1.5px solid var(--color-danger);
+  color: var(--color-danger);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.sv-logout-btn:hover {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+/* Botón hamburguesa */
+.sv-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.sv-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary-dark);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .sv-menu-toggle {
+    display: flex;
+  }
+
+  .sv-nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--color-bg-alt);
+    box-shadow: var(--shadow-md);
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .sv-nav-links.abierto {
+    max-height: 420px;
+  }
+
+  .sv-nav-links li {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .sv-nav-links a.active::after {
+    display: none;
+  }
+
+  .sv-login-link {
+    display: inline-block;
+  }
+
+  .sv-nav-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}

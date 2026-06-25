@@ -1,0 +1,187 @@
+/* src/pages/Home.css */
+
+.sv-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.sv-hero {
+  position: relative;
+  height: calc(100vh - var(--nav-height));
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ──────────────────────────────────────────
+   Imagen poster (fallback móvil)
+   Visible siempre; en desktop queda detrás
+   del video una vez que este carga.
+────────────────────────────────────────── */
+.sv-hero-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sv-hero-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ──────────────────────────────────────────
+   Video hero
+   En móvil se oculta para mejorar FCP/LCP.
+────────────────────────────────────────── */
+.sv-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sv-hero-video {
+    display: none;
+  }
+}
+
+.sv-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 43, 58, 0.55) 0%,
+    rgba(2, 43, 58, 0.75) 100%
+  );
+}
+
+.sv-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+}
+
+.sv-hero-content h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.sv-hero-content p {
+  font-size: 1.1rem;
+  color: var(--color-primary-light);
+  margin-bottom: 2rem;
+}
+
+.sv-hero-btn {
+  font-size: 1.05rem;
+  padding: 0.9rem 2.2rem;
+}
+
+.sv-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 3.5rem 1.25rem;
+}
+
+.sv-highlight-card {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.sv-highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.sv-highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  transition: var(--transition);
+}
+
+.sv-highlight-card:hover .sv-highlight-icon {
+  transform: scale(1.1);
+}
+
+.sv-highlight-card h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 0.6rem;
+}
+
+.sv-highlight-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 880px) {
+  .sv-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .sv-hero-content p {
+    font-size: 1rem;
+  }
+
+  .sv-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sv-icon-trust {
+  color: var(--color-primary);
+  background-color: rgba(31, 122, 140, 0.12);
+}
+
+.sv-icon-easy {
+  color: var(--color-accent);
+  background-color: rgba(255, 126, 95, 0.12);
+}
+
+.sv-icon-trustcolor {
+  color: var(--color-secondary);
+  background-color: rgba(46, 196, 182, 0.12);
+}
+
+/*
+   Utilidad de accesibilidad
+   Oculta visualmente un elemento pero lo deja
+   disponible para lectores de pantalla.
+*/
+.sv-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ocultar la imagen (poster) en PC para que solo cargue el video sin parpadeos */
+@media (min-width: 769px) {
+  .sv-hero-poster {
+    display: none;
+  }
+}

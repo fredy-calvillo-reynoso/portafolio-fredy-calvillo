@@ -1,0 +1,55 @@
+/* src/components/Layout/Footer.css */
+
+.sv-footer {
+  background-color: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.sv-footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.sv-footer-brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin: 0;
+}
+
+.sv-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1.5rem;
+}
+
+.sv-footer-legal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.3rem 0;
+}
+
+.sv-footer-legal-link:hover {
+  color: #fff;
+}
+
+.sv-footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}

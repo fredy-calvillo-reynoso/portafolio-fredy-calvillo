@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/img/logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sense Vision es un bastón inteligente diseñado para apoyar a personas con discapacidad visual. Integra sensores de proximidad, alertas en tiempo real, localización GPS y tecnología accesible para brindar autonomía y seguridad en cada paso."
+    />
+
+    <!-- Preconnect / dns-prefetch a orígenes de Firebase y Google APIs.
+         Se cargan solo cuando se usan (login, pedidos, perfil, admin),
+         pero al anticipar la conexión se evita el costo de la negociación
+         DNS/TLS en el momento en que realmente se necesiten. -->
+    <link rel="preconnect" href="https://sense-vision-a8451.firebaseapp.com" crossorigin />
+    <link rel="dns-prefetch" href="https://sense-vision-a8451.firebaseapp.com" />
+    <link rel="preconnect" href="https://apis.google.com" crossorigin />
+    <link rel="dns-prefetch" href="https://apis.google.com" />
+
+    <title>Sense Vision</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

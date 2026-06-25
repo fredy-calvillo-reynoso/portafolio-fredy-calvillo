@@ -1,0 +1,185 @@
+/* src/pages/Admin.css */
+
+.sv-admin {
+  padding: 2.5rem 1.25rem 3.5rem;
+}
+
+.sv-admin-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.sv-admin-tab {
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background-color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sv-admin-tab--activa {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.sv-admin-error {
+  background-color: #fdecee;
+  color: var(--color-danger);
+  border: 1px solid #f6c3ca;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.sv-admin-loading {
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.sv-admin-tabla-wrapper {
+  padding: 0.5rem;
+  overflow-x: auto;
+}
+
+.sv-admin-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sv-admin-tabla th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  color: var(--color-primary-dark);
+  border-bottom: 2px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.sv-admin-tabla td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.sv-admin-tabla select {
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.sv-admin-vacio {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 2rem !important;
+}
+
+.sv-admin-rol {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sv-admin-rol--admin {
+  background-color: #fff3cd;
+  color: #8a6d00;
+}
+
+.sv-admin-rol--user {
+  background-color: #e6f8f6;
+  color: #18837a;
+}
+
+/* ──────────────────────────────────────────
+   Barra de filtros (Pedidos y Reportes)
+────────────────────────────────────────── */
+.sv-admin-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sv-admin-filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1 1 160px;
+  min-width: 150px;
+}
+
+.sv-admin-filtro-grupo label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+/* Mismo look que los inputs/selects del resto del proyecto */
+.sv-admin-filtro-grupo select,
+.sv-admin-filtro-grupo input[type="date"] {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: #fff;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+.sv-admin-filtro-grupo select:focus,
+.sv-admin-filtro-grupo input[type="date"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(31, 122, 140, 0.12);
+}
+
+/* Botón "Limpiar filtros": sutil pero visible */
+.sv-admin-filtro-limpiar {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .sv-admin-filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sv-admin-filtro-grupo {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .sv-admin-filtro-limpiar {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ──────────────────────────────────────────
+   Columna "Mensaje" en Reportes
+────────────────────────────────────────── */
+.sv-admin-mensaje {
+  max-width: 280px;
+  white-space: normal;
+  line-height: 1.5;
+  color: var(--color-text);
+}

@@ -1,0 +1,185 @@
+/* src/pages/Tienda.css */
+
+/* ── Hero ── */
+.sv-tienda {
+  padding-bottom: 4rem;
+}
+
+.sv-tienda-hero {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  padding: 3.5rem 0 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.sv-tienda-eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.sv-tienda-hero .section-title {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.sv-tienda-hero .section-subtitle {
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Grid de bastones ── */
+.sv-bastones-section {
+  margin-bottom: 3rem;
+}
+
+.sv-bastones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+/* ── Configurador ── */
+.sv-configurador {
+  margin-top: 0.5rem;
+}
+
+.sv-configurador-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.sv-configurador-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.25rem;
+}
+
+.sv-configurador-sub {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.sv-configurador-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.sv-configurador-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sv-configurador-derecha {
+  position: sticky;
+  top: calc(var(--nav-height) + 1.5rem);
+}
+
+/* ── Resumen del modelo ── */
+.sv-resumen-modelo {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  align-items: flex-start;
+}
+
+.sv-resumen-modelo-img-wrap {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sv-resumen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sv-resumen-modelo-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sv-resumen-modelo-info h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.sv-resumen-desc-corta {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.85rem;
+  line-height: 1.4;
+}
+
+.sv-resumen-materiales {
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.sv-resumen-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.sv-resumen-materiales p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .sv-bastones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sv-configurador-layout {
+    grid-template-columns: 1fr;
+  }
+  .sv-configurador-derecha {
+    position: static;
+  }
+  .sv-resumen-modelo {
+    flex-direction: column;
+  }
+  .sv-resumen-modelo-img-wrap {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sv-bastones-grid {
+    grid-template-columns: 1fr;
+  }
+  .sv-tienda-hero {
+    padding: 2.5rem 0 2rem;
+  }
+}

@@ -1,0 +1,141 @@
+/* Contenedor del botón en la tienda */
+.sv-componentes-contenedor {
+  margin: 15px 0;
+}
+
+.sv-btn-componentes {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+/* Fondo oscuro del modal */
+.sv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(2, 43, 58, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start; /* Se cambia de center a flex-start para controlar la altura inicial */
+  justify-content: center;
+  padding: 12vh 20px 20px 20px; /* 12vh de espacio arriba empuja la ventana hacia abajo de forma proporcional */
+  transform: translateZ(0);
+  overflow-y: auto; /* Permite desplazar la pantalla completa si el contenido supera el alto del dispositivo */
+}
+
+/* Tarjeta del Modal */
+.sv-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: svModalFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+@keyframes svModalFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98); /* Mantiene un ligero efecto de elevación al aparecer */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Encabezado */
+.sv-modal-header {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #edf2f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sv-modal-header h3 {
+  margin: 0;
+  color: #022b3a;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.sv-modal-cerrar {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #8d99ae;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.sv-modal-cerrar:hover {
+  color: #1d2d44;
+}
+
+/* Cuerpo del contenido */
+.sv-modal-body {
+  padding: 1.5rem;
+  max-height: 60vh; /* Se reduce ligeramente para mantener proporción con la nueva altura */
+  overflow-y: auto;
+}
+
+.sv-modal-intro {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Lista de componentes */
+.sv-componentes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sv-componente-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.sv-componente-icono-wrap {
+  color: #1f7a8c;
+  background: rgba(31, 122, 140, 0.08);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sv-componente-texto h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #1d2d44;
+  font-weight: 600;
+}
+
+.sv-componente-texto p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+/* Pie del modal */
+.sv-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #edf2f4;
+  display: flex;
+  justify-content: flex-end;
+}

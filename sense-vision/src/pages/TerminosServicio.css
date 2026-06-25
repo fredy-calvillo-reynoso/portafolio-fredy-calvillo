@@ -1,0 +1,397 @@
+/* src/pages/Privacidad.css */
+
+.sv-privacidad {
+  padding: 2.5rem 1.25rem 3.5rem;
+  max-width: 900px;
+}
+
+.sv-privacidad-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sv-priv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(31, 122, 140, 0.1);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.sv-priv-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: -1rem;
+  flex-wrap: wrap;
+}
+
+.sv-privacidad-card {
+  padding: 2rem 2.5rem;
+}
+
+.sv-priv-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-priv-section:last-of-type {
+  border-bottom: none;
+}
+
+.sv-priv-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.sv-priv-section-title svg {
+  flex-shrink: 0;
+}
+
+.sv-priv-section-title h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.sv-priv-section p {
+  color: var(--color-text);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.sv-priv-section h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 1.25rem 0 0.4rem;
+}
+
+.sv-priv-section ul,
+.sv-priv-section ol {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  padding-left: 1.3rem;
+  margin-bottom: 0.85rem;
+}
+
+.sv-priv-section a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sv-priv-section a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Nota de datos sensibles */
+.sv-priv-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background-color: rgba(46, 196, 182, 0.08);
+  border: 1px solid rgba(46, 196, 182, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin-top: 1rem;
+  color: var(--color-secondary);
+}
+
+.sv-priv-nota svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.sv-priv-nota p {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--color-text);
+}
+
+/* Lista de contacto */
+.sv-priv-lista-contacto {
+  list-style: none !important;
+  padding-left: 0 !important;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem !important;
+  margin-top: 0.5rem;
+}
+
+.sv-priv-lista-contacto li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.sv-priv-lista-contacto li:last-child {
+  border-bottom: none;
+}
+
+/* Tabla de transferencias */
+.sv-priv-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+  margin: 1rem 0;
+}
+
+.sv-priv-tabla th {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.sv-priv-tabla td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: top;
+}
+
+.sv-priv-tabla tr:nth-child(even) td {
+  background-color: var(--color-bg);
+}
+
+/* Grid ARCO */
+.sv-arco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.sv-arco-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+}
+
+.sv-arco-card h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.4rem;
+}
+
+.sv-arco-card p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Bloque de consentimiento */
+.sv-priv-consentimiento {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background-color: rgba(31, 122, 140, 0.07);
+  border: 1px solid rgba(31, 122, 140, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  margin-top: 1.5rem;
+  color: var(--color-primary);
+}
+
+.sv-priv-consentimiento svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.sv-priv-consentimiento p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* Firma */
+.sv-priv-firma {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.sv-priv-firma p {
+  margin: 0.2rem 0;
+}
+
+/* Botón volver */
+.sv-priv-volver {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sv-privacidad-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .sv-arco-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-priv-tabla {
+    font-size: 0.8rem;
+  }
+
+  .sv-priv-tabla th,
+  .sv-priv-tabla td {
+    padding: 0.5rem 0.65rem;
+  }
+}
+
+/* ── Estilos específicos de páginas legales ── */
+.sv-terminos.container,
+.sv-aviso-legal.container {
+  max-width: 860px;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.sv-terminos-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sv-legal-icon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.sv-legal-icon--gavel {
+  background: linear-gradient(135deg, #5a4fcf, #022b3a);
+}
+
+.sv-legal-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+}
+
+.sv-legal-card {
+  padding: 2.5rem;
+}
+
+.sv-legal-section {
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sv-legal-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.sv-legal-section-title h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.sv-legal-section p {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0 0 0.85rem;
+}
+
+.sv-legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.sv-legal-lista {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sv-legal-lista li {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.sv-legal-lista--contacto {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sv-legal-lista--contacto li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sv-legal-lista--contacto li:last-child {
+  border-bottom: none;
+}
+
+.sv-legal-section--contacto {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: none;
+  margin-bottom: 0;
+}
+
+.sv-legal-enlace {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sv-legal-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .sv-legal-card {
+    padding: 1.5rem;
+  }
+}

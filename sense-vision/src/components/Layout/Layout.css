@@ -1,0 +1,12 @@
+/* src/components/Layout/Layout.css */
+
+.sv-app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sv-main-content {
+  flex: 1;
+  padding-top: var(--nav-height);
+}

@@ -1,0 +1,45 @@
+﻿/* src/components/WhatsApp/WhatsAppButton.css */
+
+.sv-whatsapp-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.sv-whatsapp-btn:hover,
+.sv-whatsapp-btn:focus-visible {
+  background-color: #1ebe5b;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sv-whatsapp-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .sv-whatsapp-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .sv-whatsapp-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+}
