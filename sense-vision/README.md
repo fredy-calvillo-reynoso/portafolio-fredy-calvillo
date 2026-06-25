@@ -2,7 +2,6 @@
 
 Sitio web e-commerce desarrollado con React, Vite y Firebase para la venta de un baston inteligente con tecnologia de asistencia para personas con discapacidad visual.
 
-Desarrollado como proyecto de residencia profesional en el Instituto Tecnologico Superior de Huetamo, Michoacan.
 
 Demo: https://sense-vision-a8451.web.app
 
