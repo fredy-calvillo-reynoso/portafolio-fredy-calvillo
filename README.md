@@ -46,7 +46,7 @@ Proyecto enfocado en el monitoreo de datos obtenidos desde un reloj inteligente.
 
 En este proyecto desarrollé una página web que recibía y mostraba información proveniente del reloj, además de marcar la ubicación donde se encontraba el dispositivo.
 
-**Tecnologías:** React, HTML, CSS, JavaScript, Firebase, geolocalización.
+**Tecnologías:** HTML, CSS, JavaScript, Firebase, geolocalización.
 
 ### Sense Vision
 
