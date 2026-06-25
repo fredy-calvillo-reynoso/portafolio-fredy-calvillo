@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FYGA — Crear cuenta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-box">
+
+      <!-- Título -->
+      <h1 class="auth-box__title">
+        <i class="bi bi-person-plus-fill"></i> Crear cuenta
+      </h1>
+
+      <!-- Error -->
+      <div id="authError" class="alert-error" style="display:none"></div>
+
+      <!-- Formulario -->
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" class="form-input" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" class="form-input" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" class="form-input" placeholder="Mínimo 6 caracteres" required minlength="6">
+        </div>
+        <button type="submit" class="btn btn-accent btn-full">
+          <i class="bi bi-check2-circle"></i> Registrarme
+        </button>
+      </form>
+
+      <!-- Separador -->
+      <div class="auth-box__divider">o continúa con</div>
+
+      <!-- Google -->
+      <button id="btnGoogle" class="btn-google">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+        Registrarse con Google
+      </button>
+
+      <!-- Footer -->
+      <p class="auth-box__footer">
+        ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

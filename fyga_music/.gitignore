@@ -1,0 +1,14 @@
+# Firebase
+.firebase/
+.firebaserc
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credenciales — NUNCA subas este archivo a repos públicos
+assets/js/firebase-config.js

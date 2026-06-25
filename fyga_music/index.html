@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FYGA — Explora música</title>
+  <meta name="description" content="FYGA — Descubre, escucha y guarda tus canciones favoritas. Explora música en tiempo real, crea tus playlists y disfruta de recomendaciones personalizadas.">
+
+  <!-- Preconnect a dominios críticos para reducir latencia -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://e-cdns-images.dzcdn.net" crossorigin>
+  <link rel="preconnect" href="https://cdn-images.dzcdn.net" crossorigin>
+  <link rel="preconnect" href="https://fyga-proxy-app.vercel.app" crossorigin>
+
+  <!-- Bootstrap Icons: preload para que no bloquee FCP -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <!-- Logo -->
+    <div class="header__logo">
+      <i class="bi bi-music-note-beamed"></i> FYGA
+    </div>
+
+    <!-- Buscador -->
+    <form class="header__search" id="searchForm">
+      <input type="text" id="searchInput" placeholder="Buscar artista o canción…">
+      <button type="submit"><i class="bi bi-search"></i> Buscar</button>
+    </form>
+
+    <div class="header__actions" id="headerActions"></div>
+  </header>
+
+  <main>
+    <section class="songs-section" id="songsSection">
+      <h2 class="section-title" id="sectionTitle">
+        <i class="bi bi-stars"></i> Recomendados del momento
+      </h2>
+      <div class="songs-grid" id="songsGrid">
+        <!-- Las tarjetas se generan desde app.js -->
+      </div>
+    </section>
+
+    <section class="playlists-view d-none" id="playlistsView">
+      <div class="playlists-view__header">
+        <h2><i class="bi bi-music-note-list"></i> Mis Playlists</h2>
+        <button class="btn btn-outline" onclick="hideMyPlaylists()">
+          <i class="bi bi-x-lg"></i> Cerrar
+        </button>
+      </div>
+      <div id="playlistsContainer"></div>
+    </section>
+  </main>
+
+  <div id="reproductor" class="player d-none">
+    <div class="player__inner">
+      <div class="player__info">
+        <div class="player__title" id="currentSongTitle"></div>
+        <div class="player__artist" id="currentSongArtist"></div>
+      </div>
+      <audio id="audioPlayer" controls></audio>
+    </div>
+  </div>
+
+  <div id="playlistModal" class="modal-overlay d-none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="bi bi-music-note-list"></i> Agregar a playlist</h3>
+        <button class="modal-close" onclick="closePlaylistModal()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="modal-tabs">
+        <button class="tab-btn active" onclick="showExistingPlaylists()">Existentes</button>
+        <button class="tab-btn" onclick="showNewPlaylistForm()">Nueva</button>
+      </div>
+
+      <!-- Lista playlists existentes -->
+      <div id="existingPlaylists"></div>
+
+      <!-- Formulario nueva playlist -->
+      <div id="newPlaylistForm" class="new-playlist-form d-none">
+        <div class="form-group">
+          <label for="playlistName">Nombre de la playlist</label>
+          <input type="text" id="playlistName" class="form-input" placeholder="Mi playlist…">
+        </div>
+        <p class="form-hint">La portada se tomará de la primera canción que agregues.</p>
+        <button class="btn btn-accent btn-full" onclick="createNewPlaylist()">
+          <i class="bi bi-plus-circle"></i> Crear y agregar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginPopup" class="login-popup d-none">
+    <div class="login-popup__box">
+      <i class="bi bi-lock-fill lock-icon"></i>
+      <h2>Acceso restringido</h2>
+      <p>Debes iniciar sesión para usar esta función.</p>
+      <div class="login-popup__actions">
+        <a href="login.html" class="btn btn-accent">
+          <i class="bi bi-person-circle"></i> Iniciar sesión
+        </a>
+        <button class="btn btn-outline" onclick="closeLoginPopup()">
+          <i class="bi bi-x-circle"></i> Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script principal: type="module" ya implica defer, no bloquea el renderizado -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FYGA — Iniciar sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-box">
+
+      <!-- Título -->
+      <h1 class="auth-box__title">
+        <i class="bi bi-music-note-beamed"></i> FYGA
+      </h1>
+
+      <!-- Error -->
+      <div id="authError" class="alert-error" style="display:none"></div>
+
+      <!-- Formulario -->
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" class="form-input" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-accent btn-full">
+          <i class="bi bi-box-arrow-in-right"></i> Entrar
+        </button>
+      </form>
+
+      <!-- Separador -->
+      <div class="auth-box__divider">o continúa con</div>
+
+      <!-- Google -->
+      <button id="btnGoogle" class="btn-google">
+  <i class="bi bi-google"></i>
+  Iniciar sesión con Google
+</button>
+
+      <!-- Footer -->
+      <p class="auth-box__footer">
+        ¿No tienes cuenta? <a href="register.html">Crear cuenta</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>
