@@ -1,74 +1,173 @@
-# Portafolio de Evidencias - Fredy Calvillo Reynoso
+# Fyga Music
 
-Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico Superior de Huetamo.
+Aplicación web de música construida con HTML, CSS y JavaScript vanilla, que consume la API de Deezer a través de un proxy en Vercel. Permite buscar canciones, reproducir previews y organizar tu música en playlists personalizadas con autenticación de Firebase.
 
-Este portafolio reúne evidencias de mis proyectos académicos, participaciones en eventos, desarrollo de software, inteligencia artificial, aplicaciones web y soluciones tecnológicas aplicadas a problemas reales.
+**Demo en vivo:** [fyga-e313e.web.app](https://fyga-e313e.web.app)
 
-## Sobre mí
+---
 
-Me interesa el desarrollo de software, la inteligencia artificial y la creación de proyectos que puedan resolver necesidades reales.
+## Características
 
-He participado en eventos académicos y tecnológicos relacionados con innovación, salud, robótica, prototipos de desarrollo tecnológico y ciencia aplicada.
+- **Búsqueda de canciones y artistas** en tiempo real vía Deezer API
+- **Reproducción de previews** de 30 segundos directamente en el navegador
+- **Playlists personalizadas** — crea, nombra y administra tus listas
+- **Autenticación** con Google y correo/contraseña (Firebase Auth)
+- **Diseño responsivo** — funciona en escritorio y móvil
+- **Sin frameworks** — Vanilla JS puro, carga rápida
 
-## Tecnologías utilizadas
+---
 
-- Python
-- React
-- HTML
-- CSS
-- JavaScript
-- Firebase
-- PHP
-- MySQL
-- Bootstrap
-- GitHub
-- Visual Studio Code
+## Capturas de pantalla
 
-## Participaciones y proyectos principales
+### Pantalla principal
 
-### Primer Foro de la Agenda Estratégica de Salud del TecNM
+| PC | Móvil |
+|:--:|:-----:|
+| ![Principal sin sesión PC](Docs/principal-sin-iniciar-sesi%C3%B3n-pc.jpeg) | ![Principal sin sesión Móvil](Docs/principal-sin-iniciar-sesion-movil.jpeg) |
 
-Participación en el Primer Foro de la Agenda Estratégica de Salud del TecNM, evento enfocado en propuestas, proyectos e iniciativas relacionadas con salud, bienestar, tecnología e innovación.
+### Autenticación
 
-### 13º Encuentro Estatal de Robótica y Prototipos de Desarrollo Tecnológico
+| Inicio de sesión PC | Inicio de sesión Móvil |
+|:-------------------:|:----------------------:|
+| ![Login PC](Docs/login-pc.png) | ![Login Móvil](Docs/login-movil.jpeg) |
 
-Participación en el 13º Encuentro Estatal de Robótica y Prototipos de Desarrollo Tecnológico, en la categoría de Prototipos de Desarrollo Tecnológico para la Discapacidad.
+| Crear cuenta PC | Crear cuenta Móvil |
+|:---------------:|:-----------------:|
+| ![Crear cuenta PC](Docs/crear-cuenta-pc.png) | ![Crear cuenta Móvil](Docs/crear-cuenta-movil.jpeg) |
 
-Esta participación permitió presentar una propuesta tecnológica orientada a apoyar a personas con discapacidad, aplicando conocimientos de desarrollo tecnológico, prototipado, innovación y solución de problemas reales.
+| Sesión iniciada con Google PC | Sesión iniciada Móvil |
+|:-----------------------------:|:---------------------:|
+| ![Sesión Google PC](Docs/sesion-iniciada-google-pc.png) | ![Sesión Móvil](Docs/sesion-iniciada-movil.jpeg) |
 
-### ExpoCiencias Michoacán 2024
+### Búsqueda
 
-Participación como expositor en ExpoCiencias Michoacán 2024, presentando un proyecto enfocado en ciencia, tecnología e innovación.
+| Búsqueda PC | Búsqueda Móvil |
+|:-----------:|:--------------:|
+| ![Búsqueda PC](Docs/busqueda%20de%20artista-pc.png) | ![Búsqueda Móvil](Docs/busqueda-de-artista-movil.jpeg) |
 
-### VitalSync
+### Playlists
 
-Proyecto enfocado en el monitoreo de datos obtenidos desde un reloj inteligente.
+| Playlists vacías PC | Playlists vacías Móvil |
+|:-------------------:|:----------------------:|
+| ![Playlists vacías PC](Docs/playlists-vacias-pc.png) | ![Playlists vacías Móvil](Docs/playlist-vacias-movil.jpeg) |
 
-En este proyecto desarrollé una página web que recibía y mostraba información proveniente del reloj, además de marcar la ubicación donde se encontraba el dispositivo.
+| Crear playlist PC | Crear playlist Móvil |
+|:-----------------:|:--------------------:|
+| ![Crear playlist PC](Docs/creaci%C3%B3n-de-playlist-pc.png) | ![Crear playlist Móvil](Docs/creaci%C3%B3n-de-playlist-movil.jpeg) |
 
-**Tecnologías:** React, HTML, CSS, JavaScript, Firebase, geolocalización.
+| Notificación playlist creada PC | Notificación playlist creada Móvil |
+|:-------------------------------:|:----------------------------------:|
+| ![Notif playlist PC](Docs/notificaci%C3%B3n-de-confirmaci%C3%B3n-de-playlist-creada-pc.png) | ![Notif playlist Móvil](Docs/notificaci%C3%B3n-de-creaci%C3%B3n-de-playlist-creada-movil.jpeg) |
 
-### Sense Vision
+| 2 Playlists creadas PC | |
+|:----------------------:|:-:|
+| ![2 playlists PC](Docs/muestra-2-playlists-creadas-pc.png) | |
 
-Proyecto de bastón electrónico enfocado en apoyar a personas con discapacidad visual.
+### Agregar canciones a playlists
 
-Incluye el uso de sensores, vibración y alertas para mejorar la movilidad y seguridad del usuario.
+| Agregar canción PC | Agregar canción Móvil |
+|:------------------:|:---------------------:|
+| ![Agregar canción PC](Docs/confirmaci%C3%B3n-de-canci%C3%B3n-gregada-pc.png) | ![Agregar canción Móvil](Docs/confirmaci%C3%B3n-de-canci%C3%B3n-gregada-movil.jpeg) |
 
-**Tecnologías:** sensores, electrónica, prototipado, documentación técnica.
+| Canciones agregadas PC | Canciones agregadas Móvil |
+|:----------------------:|:-------------------------:|
+| ![Canciones en playlist PC](Docs/muestra-canciones-agregadas-pc.png) | ![Canciones en playlist Móvil](Docs/muestra-canciones-agregadas-movil.jpeg) |
 
-### Algoritmo Peter Clark
+| Canción agregada Móvil |
+|:----------------------:|
+| ![Se agregó canción Móvil](Docs/se-agrego-cancion-a-playlist-movil.jpeg) |
 
-Proyecto relacionado con ciencia de datos e inteligencia artificial aplicado al análisis de información médica para el cálculo de bolo de insulina.
+---
 
-**Tecnologías:** Python, análisis de datos, inteligencia artificial, modelos causales.
+## Tecnologías
 
-## Objetivo del portafolio
+| Capa | Tecnología |
+|------|-----------|
+| Frontend | HTML5, CSS3, JavaScript (ES Modules) |
+| Autenticación | Firebase Auth (Google + Email/Password) |
+| Base de datos | Cloud Firestore |
+| API de música | Deezer API (via proxy Vercel) |
+| Hosting | Firebase Hosting |
+| Proxy | Vercel Serverless Functions |
 
-El objetivo de este portafolio es mostrar de forma ordenada mis conocimientos, proyectos, participaciones y avances como estudiante de Ingeniería en Sistemas Computacionales.
+---
 
-## Contacto
+## Instalación local
 
-**Nombre:** Fredy Calvillo Reynoso  
-**Correo:** fredycalvilloreynoso@gmail.com  
-**GitHub:** github.com/fredy-calvillo-reynoso  
-**LinkedIn:** linkedin.com/in/fredy-calvillo-reynoso-46a5732a1
+### Prerrequisitos
+
+- Cuenta en [Firebase](https://firebase.google.com)
+- Cuenta en [Vercel](https://vercel.com) (para el proxy de Deezer)
+- Navegador moderno con soporte para ES Modules
+
+### Pasos
+
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/fyga-music.git
+   cd fyga-music
+   ```
+
+2. **Configura Firebase**
+
+   Renombra el archivo de ejemplo y coloca tus credenciales:
+   ```bash
+   cp assets/js/firebase-config.example.js assets/js/firebase-config.js
+   ```
+   Luego edita `assets/js/firebase-config.js` con los datos de tu proyecto Firebase (los encuentras en **Configuración del proyecto → Tus apps** en la consola de Firebase).
+
+3. **Configura el proxy de Deezer**
+
+   El archivo `api/deezer.js` apunta a un proxy en Vercel para evitar problemas de CORS con la API de Deezer. Despliega tu propio proxy o actualiza la constante `PROXY` con tu URL:
+   ```js
+   const PROXY = 'https://tu-proxy.vercel.app/api/deezer';
+   ```
+
+4. **Sirve el proyecto localmente**
+
+   Como usa ES Modules, necesitas un servidor HTTP (no abrir el HTML directamente):
+   ```bash
+   npx serve .
+   # o con Python
+   python -m http.server 8080
+   ```
+
+5. **Abre** `http://localhost:8080` en tu navegador.
+
+---
+
+## Estructura del proyecto
+
+```
+fyga_music/
+├── index.html                  # Página principal
+├── login.html                  # Inicio de sesión
+├── register.html               # Registro de cuenta
+├── users.html                  # Panel de usuario
+├── firebase.json               # Configuración Firebase Hosting
+├── api/
+│   └── deezer.js               # Cliente del proxy de Deezer
+├── assets/
+│   ├── css/
+│   │   └── styles.css          # Estilos globales
+│   └── js/
+│       ├── app.js              # Lógica principal
+│       ├── auth.js             # Manejo de autenticación
+│       ├── admin.js            # Funciones de administración
+│       └── firebase-config.example.js  # Plantilla de configuración
+└── Docs/                       # Capturas de pantalla
+```
+
+---
+
+## Seguridad
+
+- El archivo `assets/js/firebase-config.js` con tus credenciales reales está en `.gitignore` — **nunca lo subas a un repositorio público**.
+- Usa las [reglas de seguridad de Firestore](https://firebase.google.com/docs/firestore/security/get-started) para proteger tu base de datos.
+- Configura los dominios autorizados en Firebase Auth → **Configuración → Dominios autorizados**.
+
+---
+
+## Licencia
+
+MIT — libre para uso personal y educativo.
